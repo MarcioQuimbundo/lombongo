@@ -31,7 +31,7 @@ class _HomeState extends State<Home> {
                   builder: (context) => AlertDialog(
                         title: Text("Adicionar"),
                         content: Container(
-                          height: 100.0,
+                          height: 180.0,
                           child: Column(
                             children: <Widget>[
                               //este é o botão para adicionar novas rendas
@@ -44,8 +44,40 @@ class _HomeState extends State<Home> {
                                   Padding(
                                     padding: EdgeInsets.all(4.0),
                                     child: MaterialButton(
-                                      onPressed: (){},
+                                      onPressed: () {},
                                       child: Text('Renda'),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              //este é o botão para adicionar despesas
+                              Row(
+                                children: <Widget>[
+                                  Padding(
+                                    padding: EdgeInsets.all(1.0),
+                                    child: Icon(Icons.money_off),
+                                  ),
+                                  Padding(
+                                    padding: EdgeInsets.all(4.0),
+                                    child: MaterialButton(
+                                      onPressed: () {},
+                                      child: Text('Despesa'),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              //este é o botão para adicionar uma nova categoria
+                              Row(
+                                children: <Widget>[
+                                  Padding(
+                                    padding: EdgeInsets.all(1.0),
+                                    child: Icon(Icons.dashboard),
+                                  ),
+                                  Padding(
+                                    padding: EdgeInsets.all(4.0),
+                                    child: MaterialButton(
+                                      onPressed: () {},
+                                      child: Text('Categoria'),
                                     ),
                                   ),
                                 ],
@@ -53,9 +85,10 @@ class _HomeState extends State<Home> {
                             ],
                           ),
                         ),
-                      ));
+                      )
+                    );
             },
-          )
+          ),
         ],
       ),
       bottomNavigationBar: Container(
