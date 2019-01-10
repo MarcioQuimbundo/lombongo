@@ -1,6 +1,6 @@
 # lombongo
 
-A new Flutter project.
+Uma aplicação para gestão do dinheiro no seu dia a dia.
 
 ## Getting Started
 
