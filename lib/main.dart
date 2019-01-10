@@ -25,18 +25,29 @@ class _HomeState extends State<Home> {
           IconButton(
             icon: Icon(Icons.add),
             onPressed: () {
-              //this will call the alert
+              //chamar o alert dialog
               showDialog(
                   context: context,
                   builder: (context) => AlertDialog(
-                        title: Text("Add"),
+                        title: Text("Adicionar"),
                         content: Container(
                           height: 100.0,
                           child: Column(
                             children: <Widget>[
+                              //este é o botão para adicionar novas rendas
                               Row(
                                 children: <Widget>[
-                                  Text('teste'),
+                                  Padding(
+                                    padding: EdgeInsets.all(1.0),
+                                    child: Icon(Icons.attach_money),
+                                  ),
+                                  Padding(
+                                    padding: EdgeInsets.all(4.0),
+                                    child: MaterialButton(
+                                      onPressed: (){},
+                                      child: Text('Renda'),
+                                    ),
+                                  ),
                                 ],
                               ),
                             ],
