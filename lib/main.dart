@@ -15,6 +15,8 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
+    final mediaQuerydata = MediaQuery.of(context);
+    final size = mediaQuerydata.size.width;
     return Scaffold(
       appBar: AppBar(
         title: Text('Lombongo App'),
@@ -85,9 +87,25 @@ class _HomeState extends State<Home> {
                             ],
                           ),
                         ),
-                      )
-                    );
+                      ));
             },
+          ),
+        ],
+      ),
+      body: Stack(
+        children: <Widget>[
+          Center(
+            child: ListTile(
+              title: Icon(
+                Icons.account_balance_wallet,
+                size: 64.0,
+                color: Colors.grey,
+              ),
+              subtitle: Padding(
+                padding: EdgeInsets.only(left: size / 5.0),
+                child: Text('não desperdice lombongo!', style: TextStyle(fontSize: 18.0)),
+              ),
+            ),
           ),
         ],
       ),
@@ -116,7 +134,6 @@ class _HomeState extends State<Home> {
           ],
         ),
       ),
-      body: Container(),
     );
   }
 }
