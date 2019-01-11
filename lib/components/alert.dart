@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:lombongo/pages/renda.dart';
+import 'package:lombongo/pages/despesa.dart';
+import 'package:lombongo/pages/categoria.dart';
 
 class AlertComponents extends StatefulWidget {
   @override
@@ -22,7 +25,9 @@ class _AlertComponentsState extends State<AlertComponents> {
             Padding(
               padding: EdgeInsets.all(4.0),
               child: MaterialButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => Renda()));
+                },
                 child: Text('Renda'),
               ),
             ),
@@ -38,7 +43,9 @@ class _AlertComponentsState extends State<AlertComponents> {
             Padding(
               padding: EdgeInsets.all(4.0),
               child: MaterialButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => Despesa()));
+                },
                 child: Text('Despesa'),
               ),
             ),
@@ -54,7 +61,9 @@ class _AlertComponentsState extends State<AlertComponents> {
             Padding(
               padding: EdgeInsets.all(4.0),
               child: MaterialButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => Categoria()));
+                },
                 child: Text('Categoria'),
               ),
             ),

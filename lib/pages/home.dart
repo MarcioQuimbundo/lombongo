@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 
 //importações
-import 'package:lombongo/pages/renda.dart';
-import 'package:lombongo/pages/despesa.dart';
-import 'package:lombongo/pages/categoria.dart';
+
 import 'package:lombongo/components/alert.dart';
 class Home extends StatefulWidget {
   @override
