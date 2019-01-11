@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lombongo/components/alert.dart';
-
+import 'package:lombongo/pages/home.dart';
 class Categoria extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
@@ -18,6 +18,13 @@ class _CategoriaState extends State<Categoria> {
         centerTitle: false,
         elevation: 2.0,
         actions: <Widget>[
+          IconButton(
+            icon: Icon(Icons.home),
+            onPressed: () {
+              Navigator.pop(context, MaterialPageRoute(builder: (context) => AlertComponents()));
+              Navigator.pop(context, MaterialPageRoute(builder: (context) => Home()));
+            },
+          ),
           IconButton(
             icon: Icon(Icons.add),
             onPressed: () {
